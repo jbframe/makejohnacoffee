@@ -28,7 +28,7 @@ Once the project moves into development, the press release can be used as a touc
   <!-- > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good. -->
   > BUY/MAKE me a coffee via the magic of the internet! 100% of all contributions go to the amazing nonprofit code.org who is working to expand access to computer science.
 
-  > Each time you 'buy me a coffee' on buymeacoffee.com/makejohnacoffee, you will be donating to code.org AND the MESSAGE you leave will be ENQUEUED on my REAL LIFE (and internet connected) COFFEE MACHINE.
+  > Each time you 'buy me a coffee' on http://buymeacoffee.com/makejohnacoffee, you will be donating to code.org AND the MESSAGE you leave will be ENQUEUED on my REAL LIFE (and internet connected) COFFEE MACHINE.
 
   > Then, for each brew which I physically make, the next glorious message in my coffee machines's queue will be displayed directly on my PHYSICAL coffee machine's custom screen.
 
@@ -36,20 +36,20 @@ Once the project moves into development, the press release can be used as a touc
 
   > We get to message each other, I get caffeinated and all while helping out a great cause!
 
-  > Want to see where your message is in the queue? Check out makejohnacoffee.com/queue to see the current public message queue.
+  > Want to see where your message is in the queue? Check out http://makejohnacoffee.com/queue to see the current public message queue.
 
-  > Want to make me a coffee without making a donation? Sure, visit makejohnacoffee.com .
+  > Want to make me a coffee without making a donation? Sure, visit http://makejohnacoffee.com .
 
 
   > code.org is a nonprofit dedicated to expanding access to computer science in schools and increasing participation by young women and students from other underrepresented groups.
 
 ## Problem ##
   <!-- > Describe the problem your product solves. -->
-  >As the world becomes ever more isolated and physically distanced, makejohnacoffee.com allows people to connect with John in a fun and easy environment, all while helping out a great cause.
+  >As the world becomes ever more isolated and physically distanced, http://makejohnacoffee.com allows people to connect with John in a fun and easy environment, all while helping out a great cause.
 
 ## Solution ##
   <!-- > Describe how your product elegantly solves the problem. -->
-  >Each time you 'buy me a coffee' on buymeacoffee.com/makejohnacoffee, you will be donating to code.org AND the MESSAGE you leave will be ENQUEUED on my REAL LIFE (and internet connected) COFFEE MACHINE.
+  >Each time you 'buy me a coffee' on http://buymeacoffee.com/makejohnacoffee, you will be donating to code.org AND the MESSAGE you leave will be ENQUEUED on my REAL LIFE (and internet connected) COFFEE MACHINE.
 
   > Then, for each brew which I physically make, the next glorious message in my coffee machines's queue will be displayed directly on my PHYSICAL coffee machine's custom screen.
 
@@ -61,16 +61,16 @@ Once the project moves into development, the press release can be used as a touc
 
 ## How to Get Started ##
   <!-- > Describe how easy it is to get started. -->
-  >Visit buymeacoffee.com/makejohnacoffee to get started.
+  >Visit http://buymeacoffee.com/makejohnacoffee to get started.
 
-  > Want to see where your coffee is in the queue? Check out makejohnacoffee.com/queue to see the current public message queue.
+  > Want to see where your coffee is in the queue? Check out http://makejohnacoffee.com/queue to see the current public message queue.
 
-  > Want to make me a coffee without making a donation? Sure, visit makejohnacoffee.com .
+  > Want to make me a coffee without making a donation? Sure, visit http://makejohnacoffee.com .
 
 ## Customer Quote ##
   <!-- > Provide a quote from a hypothetical customer that describes how they experienced the benefit. -->
-  > "I couldn't connect with John over coffee because he lives on the other side of the world... makejohnacoffee.com changed that..."
+  > "I couldn't connect with John over coffee because he lives on the other side of the world... http://makejohnacoffee.com changed that..."
 
 ## Closing and Call to Action ##
   <!-- > Wrap it up and give pointers where the reader should go next. -->
-  > If you made it this far, you need to make me a coffee at buymeacoffee.com/makejohnacoffee .
+  > If you made it this far, you need to make John a coffee at http://buymeacoffee.com/makejohnacoffee .
