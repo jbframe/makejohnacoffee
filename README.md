@@ -36,7 +36,7 @@ Once the project moves into development, the press release can be used as a touc
 
   > We get to message each other, I get caffeinated and all while helping out a great cause!
 
-  > Want to see where your message is in the queue? Check out [http://makejohnacoffee.com/queue](http://makejohnacoffee.com/queue) to see the current public message queue.
+  > Want to see where your message is in the queue? Check out [makejohnacoffee.com/queue](http://makejohnacoffee.com/queue) to see the current public message queue.
 
   > Want to make me a coffee without making a donation? Sure, visit [makejohnacoffee.com](http://makejohnacoffee.com).
 
@@ -49,7 +49,7 @@ Once the project moves into development, the press release can be used as a touc
 
 ## Solution ##
   <!-- > Describe how your product elegantly solves the problem. -->
-  >Each time you 'buy me a coffee' on [http://makejohnacoffee.com/queue](http://makejohnacoffee.com/queue), you will be donating to code.org AND the MESSAGE you leave will be ENQUEUED on my REAL LIFE (and internet connected) COFFEE MACHINE.
+  >Each time you 'buy me a coffee' on [makejohnacoffee.com/queue](http://makejohnacoffee.com/queue), you will be donating to code.org AND the MESSAGE you leave will be ENQUEUED on my REAL LIFE (and internet connected) COFFEE MACHINE.
 
   > Then, for each brew which I physically make, the next glorious message in my coffee machines's queue will be displayed directly on my PHYSICAL coffee machine's custom screen.
 
@@ -61,9 +61,9 @@ Once the project moves into development, the press release can be used as a touc
 
 ## How to Get Started ##
   <!-- > Describe how easy it is to get started. -->
-  >Visit [http://makejohnacoffee.com/queue](http://makejohnacoffee.com/queue) to get started.
+  >Visit [makejohnacoffee.com/queue](http://makejohnacoffee.com/queue) to get started.
 
-  > Want to see where your coffee is in the queue? Check out [http://makejohnacoffee.com/queue](http://makejohnacoffee.com/queue) to see the current public message queue.
+  > Want to see where your coffee is in the queue? Check out [makejohnacoffee.com/queue](http://makejohnacoffee.com/queue) to see the current public message queue.
 
   > Want to make me a coffee without making a donation? Sure, visit [makejohnacoffee.com](http://makejohnacoffee.com).
 
