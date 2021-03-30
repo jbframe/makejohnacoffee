@@ -26,15 +26,15 @@ Once the project moves into development, the press release can be used as a touc
 
 ## Summary ##
   <!-- > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good. -->
-  > BUY/MAKE me a coffee via the magic of the internet! 100% of all contributions go to the amazing nonprofit code.org who is working to expand access to computer science.
+  > BUY/MAKE John a coffee via the magic of the internet! 100% of all contributions go to the amazing nonprofit code.org who is working to expand access to computer science.
 
-  > Each time you 'buy me a coffee' on [buymeacoffee.com/makejohnacoffee](http://buymeacoffee.com/makejohnacoffee), you will be donating to code.org AND the MESSAGE you leave will be ENQUEUED on my REAL LIFE (and internet connected) COFFEE MACHINE.
+  > Each time you 'buy me a coffee' on [buymeacoffee.com/makejohnacoffee](http://buymeacoffee.com/makejohnacoffee), you will be donating to code.org AND the MESSAGE you leave will be ENQUEUED on John's REAL LIFE (and internet connected) COFFEE MACHINE.
 
-  > Then, for each brew which I physically make, the next glorious message in my coffee machines's queue will be displayed directly on my PHYSICAL coffee machine's custom screen.
+  > Then, for each brew which John physically makes, the next glorious message in his coffee machines's queue will be displayed directly on his PHYSICAL coffee machine's custom screen.
 
-  > AND I'll reply to your message over email while I drink the coffee!
+  > AND he'll reply to your message over email while he drinks the coffee!
 
-  > We get to message each other, I get caffeinated and all while helping out a great cause!
+  > You get to message each other, John gets caffeinated and all while helping out a great cause!
 
   > Want to see where your message is in the queue? Check out [makejohnacoffee.com/queue](http://makejohnacoffee.com/queue) to see the current public message queue.
 
@@ -49,13 +49,13 @@ Once the project moves into development, the press release can be used as a touc
 
 ## Solution ##
   <!-- > Describe how your product elegantly solves the problem. -->
-  >Each time you 'buy me a coffee' on [buymeacoffee.com/makejohnacoffee](http://buymeacoffee.com/makejohnacoffee), you will be donating to code.org AND the MESSAGE you leave will be ENQUEUED on my REAL LIFE (and internet connected) COFFEE MACHINE.
+  >Each time you 'buy me a coffee' on [buymeacoffee.com/makejohnacoffee](http://buymeacoffee.com/makejohnacoffee), you will be donating to code.org AND the MESSAGE you leave will be ENQUEUED on John's REAL LIFE (and internet connected) COFFEE MACHINE.
 
-  > Then, for each brew which I physically make, the next glorious message in my coffee machines's queue will be displayed directly on my PHYSICAL coffee machine's custom screen.
+  > Then, for each brew which John physically makes, the next glorious message in his coffee machines's queue will be displayed directly on his PHYSICAL coffee machine's custom screen.
 
-  > AND I'll reply to your message over email while I drink the coffee!
+  > AND he'll reply to your message over email while he drinks the coffee!
 
-## Quote from You ##
+## Quote from John ##
   <!-- > A quote from a spokesperson in your company. -->
   > "We get to message each other, I get caffeinated and all while helping out a great cause!"
 
