@@ -49,7 +49,7 @@ Once the project moves into development, the press release can be used as a touc
 
 ## Solution ##
   <!-- > Describe how your product elegantly solves the problem. -->
-  >Each time you 'buy me a coffee' on [makejohnacoffee.com/queue](http://makejohnacoffee.com/queue), you will be donating to code.org AND the MESSAGE you leave will be ENQUEUED on my REAL LIFE (and internet connected) COFFEE MACHINE.
+  >Each time you 'buy me a coffee' on [buymeacoffee.com/makejohnacoffee](http://buymeacoffee.com/makejohnacoffee), you will be donating to code.org AND the MESSAGE you leave will be ENQUEUED on my REAL LIFE (and internet connected) COFFEE MACHINE.
 
   > Then, for each brew which I physically make, the next glorious message in my coffee machines's queue will be displayed directly on my PHYSICAL coffee machine's custom screen.
 
