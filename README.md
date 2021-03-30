@@ -61,7 +61,7 @@ Once the project moves into development, the press release can be used as a touc
 
 ## How to Get Started ##
   <!-- > Describe how easy it is to get started. -->
-  >Visit [makejohnacoffee.com/queue](http://makejohnacoffee.com/queue) to get started.
+  >Visit [buymeacoffee.com/makejohnacoffee](http://buymeacoffee.com/makejohnacoffee) to get started.
 
   > Want to see where your coffee is in the queue? Check out [makejohnacoffee.com/queue](http://makejohnacoffee.com/queue) to see the current public message queue.
 
