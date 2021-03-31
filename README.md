@@ -74,3 +74,7 @@ Once the project moves into development, the press release can be used as a touc
 ## Closing and Call to Action ##
   <!-- > Wrap it up and give pointers where the reader should go next. -->
   > If you made it this far, you need to make John a coffee at [buymeacoffee.com/makejohnacoffee](http://buymeacoffee.com/makejohnacoffee).
+
+## Attribution ##
+
+  > This app uses emjoi from  [twemoji.twitter.com](https://twemoji.twitter.com/).
