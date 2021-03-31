@@ -2,6 +2,7 @@ import Head from 'next/head';
 import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Axios from 'axios';
+import Link from 'next/link'
 
 export default function Home() {
   const [inputValues, setInputValues] = useState({
@@ -13,6 +14,11 @@ export default function Home() {
   const formSubmit = (e)=> {
     e.preventDefault();
     console.log(1);
+    Axios.post('/api/postMessage/', {
+
+    })
+    .then((res)=>console.log(res))
+    .catch((err)=>console.log(err))
   }
 
   const inputChange = (e)=> {
