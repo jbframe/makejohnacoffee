@@ -12,37 +12,67 @@ export default function Home() {
     'email':'',
     'message': ''
   });
-  const [apiFetch, setApiFetch] = useState(false);
-  const [msgQueue, setmsgQueue] = useState([]);
 
-  const getMsg = ()=> {
-    Axios.get('/api/getMessages/')
-    .then((res)=> {
-      console.log(res.data.records);
-      setApiFetch(true);
-    })
-    .catch((err)=>console.log(err))
-  }
+  const [BMAC, setBMAC] = useState([]);
+  const [lastIDStored, setLastIDStored] = useState([]);
 
-  const getBMAC = ()=> {
-    Axios.post('/api/getBMAC/', {
-      'email': inputValues.email,
-      'message': inputValues.message,
-      'url': 'https://developers.buymeacoffee.com/api/v1/supporters'
-    })
-    .then((res)=>console.log(res.data))
-    .catch((err)=>console.log(err))
-  }
 
-  if(!apiFetch) {
-    getMsg()
-    getBMAC()
-  }
+  // const getLastIDStorerd = ()=> {
+  //   Axios.get('/api/getLastIDStored/')
+  //   .then((res)=> {
+  //     console.log(res.data[0]._fields[0].low);
+  //     setLastIDStored(res.data[0]._fields[0].low);
+  //     setApiFetch(false);
+  //     getBMAC()
+  //   })
+  //   .catch((err)=>console.log(err))
+  // }
+
+  // const getBMAC = ()=> {
+  //   Axios.post('/api/getBMAC/', {
+  //     'email': inputValues.email,
+  //     'message': inputValues.message,
+  //     'url': 'https://developers.buymeacoffee.com/api/v1/supporters'
+  //   })
+  //   .then((res)=>{
+  //     console.log(res.data)
+  //     setBMAC(res.data)
+  //     for(let i = 0; i < res.data.length; i++) {
+  //       console.log(lastIDStored)
+  //       if(res.data[i].support_id > lastIDStored) {
+  //         let row = res.data[i];
+  //         postBMAC(row.support_visibility, row.payer_email, row.support_note, row.support_id)
+
+  //       } else {
+  //         break
+  //       }
+  //     }
+  //     getMsg()
+  //   })
+  //   .catch((err)=>console.log(err))
+  // }
+
+  // const postBMAC = (support_visibility, email, message, support_id)=> {
+  //   Axios.post('/api/postBMAC/', {
+  //     'email': email,
+  //     'message': message,
+  //     'source': 'BMAC',
+  //     'support_visibility': support_visibility,
+  //     'support_id': support_id
+
+  //   })
+  //   .then((res)=>console.log(res.data))
+  //   .catch((err)=>console.log(err))
+  // }
+
+
+
   const formSubmit = (e)=> {
     e.preventDefault();
     Axios.post('/api/postMessage/', {
       'email': inputValues.email,
-      'message': inputValues.message
+      'message': inputValues.message,
+      'source': 'client'
     })
     .then((res)=>console.log(res.data))
     .catch((err)=>console.log(err))
@@ -81,7 +111,7 @@ export default function Home() {
             value={inputValues.message}
             onChange={inputChange}>
           </textarea>
-          <button>Make ☕️</button>
+          <button>Make John's ☕️</button>
           </form>
 {/*
         <p className="description">

@@ -9,15 +9,15 @@ const driver = neo4j.driver(
 )
 
 
-export default function postMesssage(req, res) {
+export default function putMesssage(req, res) {
 
-  const params = [req.body.email, req.body.message, req.body.source]
+  const params = [req.body.identity]
   console.log(params);
 
-  const postMessages = (params) => {
+  const putMessage = (params) => {
     const session = driver.session({database: 'neo4j'});
 
-    return session.run('CREATE (:Message {message: $messageParam, email: $emailParam, source: $sourceParam, displayed: false,timestamp: datetime()})', {messageParam: params[0], emailParam: params[1], sourceParam: params[2]})
+    return session.run('MATCH (n) WHERE ID(n) = $identityParam SET n.displayed = true RETURN n', {identityParam: params[0]})
     .then(result => {
        res.status(200).json(result);
     })
@@ -28,7 +28,7 @@ export default function postMesssage(req, res) {
       return session.close();
     });
   }
-  postMessages(params)
+  putMessage(params)
 
 
 }

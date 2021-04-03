@@ -8,41 +8,23 @@ const driver = neo4j.driver(
   neo4j.auth.basic('neo4j', Config.neo4jPassword)
 )
 
-
 export default function getBMAC(req, res) {
-  console.log(req.body)
-  let result = axios(req.body.url, {
-    method: 'GET',
-    headers: {
-      'Authorization': `Bearer ${Config.token}`,
-    }
-  })
-  .then((result)=>res.status(200).json(result.data))
-  .catch((err)=>{console.log(err)})
+  const BMAC = async (queryString) => {
+        let result = axios(req.body.url, {
+          method: 'GET',
+          headers: {
+            'Authorization': `Bearer ${Config.token}`,
+          }
+        })
+        .then((result)=> {
+          let data = result.data.data
+          res.status(200).json(data)
+        })
+        .catch((err)=>{console.log(err)})
 
 
-
-
-
-  // const searchMessages = (params) => {
-  //   const session = driver.session({database: 'neo4j'});
-
-  //   return session.readTransaction((tx) =>
-  //       tx.run('CREATE (n:Message {message: "hi" })')
-  //     )
-  //     .then(result => {
-
-
-  //       res.status(200).json(result);
-  //     })
-  //     .catch(error => {
-  //       throw error;
-  //     })
-  //     .finally(() => {
-  //       return session.close();
-  //     });
-  // }
-  // searchMessages(params)
+  }
+  BMAC()
 
 
 }

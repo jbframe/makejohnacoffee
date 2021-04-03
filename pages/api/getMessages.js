@@ -16,7 +16,7 @@ export default function postMesssages(req, res) {
   const searchMessages = async (queryString) => {
     const session = driver.session({database: 'neo4j'});
     return session.readTransaction((tx) =>
-        tx.run('MATCH (n:Message) RETURN n LIMIT 25')
+        tx.run('MATCH (n:Message) WHERE n.displayed = false RETURN n  ORDER BY n.timestamp LIMIT 100')
       )
       .then(result => {
         res.status(200).json(result);
