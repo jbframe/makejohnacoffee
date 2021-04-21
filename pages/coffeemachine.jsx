@@ -4,8 +4,6 @@ import Image from 'next/image';
 import Axios from 'axios';
 import Link from 'next/link'
 
-//tay tay quotes if needed
-//https://api.taylor.rest/
 
 export default function Home() {
   const [apiFetch, setApiFetch] = useState(true);
