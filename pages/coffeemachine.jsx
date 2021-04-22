@@ -6,7 +6,6 @@ import Link from 'next/link'
 
 
 export default function Home() {
-  const [apiFetch, setApiFetch] = useState(true);
   const [msgQueue, setMsgQueue] = useState([]);
   const getMsg = ()=> {
     Axios.get('/api/getMessages/')
@@ -18,9 +17,9 @@ export default function Home() {
     .catch((err)=>console.log(err))
   }
 
-  if(apiFetch) {
+  useEffect(()=> {
     getMsg()
-  }
+  }, [])
 
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
