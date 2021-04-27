@@ -10,7 +10,7 @@ export default function Home() {
   const getMsg = ()=> {
     Axios.get('/api/getMessages/')
     .then((res)=> {
-      console.log(res.data.records);
+      //console.log(res.data.records);
       setMsgQueue(res.data.records)
       setApiFetch(false);
     })
