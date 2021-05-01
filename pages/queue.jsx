@@ -5,7 +5,7 @@ import Axios from 'axios';
 import Link from 'next/link'
 
 
-// export default function queue() {
+fexport default function queue() {
 //   const [msgQueue, setMsgQueue] = useState([]);
 //   const getMsg = ()=> {
 //     Axios.get('/api/getMessages/')
@@ -65,7 +65,11 @@ import Link from 'next/link'
 
 
 
-//   return (
+return (
+  <React.Fragment>
+
+  </React.Fragment>)
+};
 //     <div className="container">
 //       <Head>
 //         <title>Coffee Machine</title>
