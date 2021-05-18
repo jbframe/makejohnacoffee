@@ -114,6 +114,10 @@ export default function Home() {
             onChange={inputChange}>
           </textarea>
           <button>Make John's ☕️</button>
+          {msgSubmitted
+            ? <div>Message Sent!</div>
+            : <React.Fragment></React.Fragment>
+          }
           </form>
 {/*
         <p className="description">
