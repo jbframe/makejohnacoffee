@@ -48,7 +48,7 @@ export default function Home() {
     setTayTay('')
     putMsg(msgQueue[0]._fields[0].identity.low);
     } else {
-      Axios.get('https://api.taylor.rest/')
+      Axios.get('https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=coffee')
       .then((res)=>{
         setEmail('')
         setMessage(`You have no messages but here is a quote from Taylor Swift.`)
