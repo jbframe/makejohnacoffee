@@ -47,6 +47,7 @@ export default function Home() {
         setMsgSubmitted(true);
       })
       .catch((err)=>console.log(err))
+
     } else if (!msgSubmitted && inputValues.message === '' && inputValues.email === '') {
       setPlaceholderValues({'email': 'You must enter an email', 'message': 'and a message!'})
 
@@ -57,8 +58,6 @@ export default function Home() {
     } else if (!msgSubmitted && inputValues.message === '') {
       setPlaceholderValues({...placeholderValues, 'message': 'You must enter a message!'})
 
-
-
     } else if (msgSubmitted) {
       setInputValues({...inputValues, 'email': inputValues.lastEmail, 'message': ''})
       setPlaceholderValues({...placeholderValues, 'message': 'Message'})
@@ -67,7 +66,16 @@ export default function Home() {
   }
 
   const inputChange = (e)=> {
+
+    if (e.target.name === 'email' && e.target.value.split('\n').length > 1) {
+      e.preventDefault();
+      let singleLineString = e.target.value.split('\n')[0]
+      setInputValues({...inputValues, [e.target.name]: singleLineString})
+    } else {
     setInputValues({...inputValues, [e.target.name]: e.target.value})
+    }
+
+
   }
 
   const conditionalButtonText = ()=> {
@@ -175,7 +183,7 @@ export default function Home() {
         </div>
         <div style={{"display": "flex"}}>
           <div><Image src="/favicon-16x16.webp" width="16" height="16" /></div>
-              <a href="https://www.buymeacoffee.com/makejohnacoffee">Make me coffee while supporting code.org</a>
+              <a href="https://www.buymeacoffee.com/makejohnacoffee">Make John coffee while supporting code.org</a>
             <div><Image src="/favicon-16x16.webp" width="16" height="16" /></div>
         </div>
 
