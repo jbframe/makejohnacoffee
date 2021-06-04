@@ -12,13 +12,15 @@ export default function Home() {
     .then((res)=> {
       //console.log(res.data.records);
       setMsgQueue(res.data.records)
-      setApiFetch(false);
+      console.log('fetch')
+
     })
     .catch((err)=>console.log(err))
   }
 
   useEffect(()=> {
     getMsg()
+
   }, [])
 
   const [email, setEmail] = useState('')
@@ -41,6 +43,7 @@ export default function Home() {
 
   const onSubmit = (e)=> {
     e.preventDefault();
+    getMsg()
     if (msgQueue.length > 0) {
       console.log(msgQueue[0]._fields[0].properties.email)
     setEmail(msgQueue[0]._fields[0].properties.email);
@@ -48,16 +51,17 @@ export default function Home() {
     setTayTay('')
     putMsg(msgQueue[0]._fields[0].identity.low);
     } else {
-      Axios.get('https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=coffee')
-      .then((res)=>{
-        setEmail('')
-        setMessage(`You have no messages but here is a quote from Taylor Swift.`)
-        setTayTay(res.data .quote)
-        getMsg()
+      setMessage(`You have no messages`)
+      // Axios.get('https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=coffee')
+      // .then((res)=>{
+      //   setEmail('')
+      //   setMessage(`You have no messages but here is a quote from Taylor Swift.`)
+      //   setTayTay(res.data .quote)
+      //   getMsg()
 
-        console.log(res.data)
-      })
-      .catch((err)=>console.log(err))
+      //   console.log(res.data)
+      // })
+      // .catch((err)=>console.log(err))
 
     }
   }

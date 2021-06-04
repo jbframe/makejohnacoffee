@@ -5,20 +5,117 @@ import Axios from 'axios';
 import Link from 'next/link'
 
 //tay tay quotes if needed
-//https://api.taylor.rest/
+//https://api.taylor.rest/ RIP THIS API IS DEAD
 
 export default function Home() {
   const [inputValues, setInputValues] = useState({
     'email':'',
-    'message': ''
+    'message': '',
+    'lastEmail': ''
+  });
+  const [placeholderValues, setPlaceholderValues] = useState({
+    'email':'Email',
+    'message': 'Message'
   });
 
   const [BMAC, setBMAC] = useState([])
   const [lastIDStored, setLastIDStored] = useState([]);
   const [msgSubmitted, setMsgSubmitted] = useState(false);
 
+  //  COFFEE DRINK APIs
+  //'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=coffee'
+  // https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=[DRINK ID]
 
-  // const getLastIDStorerd = ()=> {
+  const validateEmail = (email)=> {
+      var re = /\S+@\S+\.\S+/;
+      return re.test(email);
+  }
+
+  const formSubmit = (e)=> {
+    e.preventDefault();
+    let isEmailValid = validateEmail(inputValues.email)
+    if(!msgSubmitted && inputValues.email !== '' && inputValues.message !== '' && isEmailValid) {
+      Axios.post('/api/postMessage/', {
+        'email': inputValues.email,
+        'message': inputValues.message,
+        'source': 'client'
+      })
+      .then((res)=>{
+        console.log(res.data);
+        setInputValues({'lastEmail': inputValues.email, 'email': '', 'message': ''})
+        setPlaceholderValues({'email': 'Message Sent', 'message': 'You will receive an email when this coffee is made for John.'})
+        setMsgSubmitted(true);
+      })
+      .catch((err)=>console.log(err))
+    } else if (!msgSubmitted && inputValues.message === '' && inputValues.email === '') {
+      setPlaceholderValues({'email': 'You must enter an email', 'message': 'and a message!'})
+
+    } else if (!msgSubmitted && (inputValues.email === '' || !isEmailValid)) {
+      setInputValues({...inputValues, 'email': ''})
+      setPlaceholderValues({...placeholderValues, 'email': 'You must enter a valid email!'})
+
+    } else if (!msgSubmitted && inputValues.message === '') {
+      setPlaceholderValues({...placeholderValues, 'message': 'You must enter a message!'})
+
+
+
+    } else if (msgSubmitted) {
+      setInputValues({...inputValues, 'email': inputValues.lastEmail, 'message': ''})
+      setPlaceholderValues({...placeholderValues, 'message': 'Message'})
+      setMsgSubmitted(false);
+    }
+  }
+
+  const inputChange = (e)=> {
+    setInputValues({...inputValues, [e.target.name]: e.target.value})
+  }
+
+  const conditionalButtonText = ()=> {
+    return (
+      !msgSubmitted
+        ?  <button className="button">Make John's ☕️</button>
+        :  <button className="buttonSent">Make John another ☕️?</button>
+    )
+  }
+
+  return (
+    <div className="container">
+      <Head>
+        <title>Make John a ☕️</title>
+        <link rel="icon" href="/favicon-16x16.png" />
+      </Head>
+
+      <main>
+        <h1 className="title">
+          Make John a ☕️
+        </h1>
+
+        <form className="form" onSubmit={formSubmit}>
+          <textarea
+            name="email"
+            type="text"
+            rows="1"
+            placeholder={placeholderValues.email}
+            value={inputValues.email}
+            onChange={inputChange}>
+          </textarea>
+          <textarea
+            name="message"
+            type="text"
+            rows="10"
+            placeholder={placeholderValues.message}
+            value={inputValues.message}
+            onChange={inputChange}>
+          </textarea>
+          {conditionalButtonText()}
+          </form>
+{/*
+        <p className="description">
+        John's coffee machine will allow him to make 1 coffee for each make ☕️ press
+        </p> */}
+
+      </main>
+  {// const getLastIDStorerd = ()=> {
   //   Axios.get('/api/getLastIDStored/')
   //   .then((res)=> {
   //     console.log(res.data[0]._fields[0].low);
@@ -64,72 +161,7 @@ export default function Home() {
   //   })
   //   .then((res)=>console.log(res.data))
   //   .catch((err)=>console.log(err))
-  // }
-
-
-
-  const formSubmit = (e)=> {
-    e.preventDefault();
-    setMsgSubmitted(true);
-    Axios.post('/api/postMessage/', {
-      'email': inputValues.email,
-      'message': inputValues.message,
-      'source': 'client'
-    })
-    .then((res)=>console.log(res.data))
-    .catch((err)=>console.log(err))
   }
-
-  const inputChange = (e)=> {
-    setInputValues({...inputValues, [e.target.name]: e.target.value})
-  }
-
-  return (
-    <div className="container">
-      <Head>
-        <title>Make John a ☕️</title>
-        <link rel="icon" href="/favicon-16x16.png" />
-      </Head>
-
-      <main>
-        <h1 className="title">
-          Make John a ☕️
-        </h1>
-
-        <form className="form" onSubmit={formSubmit}>
-          <textarea
-            name="email"
-            type="text"
-            rows="1"
-            placeholder="Email"
-            value={inputValues.email}
-            onChange={inputChange}>
-          </textarea>
-          <textarea
-            name="message"
-            type="text"
-            rows="10"
-            placeholder="Message"
-            value={inputValues.message}
-            onChange={inputChange}>
-          </textarea>
-          <button>Make John's ☕️</button>
-          {msgSubmitted
-            ? <div>Message Sent!</div>
-            : <React.Fragment></React.Fragment>
-          }
-          </form>
-{/*
-        <p className="description">
-        John's coffee machine will allow him to make 1 coffee for each make ☕️ press
-        </p> */}
-
-
-
-
-
-      </main>
-
       <footer >
         <div style={{"display": "flex"}}>
               <div><Image src="/LI-In-Bug.png" width="16" height="16" /></div>
@@ -188,24 +220,10 @@ export default function Home() {
           border-radius: 10px;
         }
 
-        button:hover,
-        button:focus,
-        button:active {
-          color: #0070f3;
-          border-color: #0070f3;
-        }
-
         textarea{
           border-radius: 5px;
           margin: 0 0 1rem 0;
           font-size: 1rem;
-        }
-
-        button {
-          border-radius: 10px;
-          background-color: white;
-          font-size: 1.25rem;
-          border-width: 1px;
         }
 
         footer {
@@ -245,6 +263,30 @@ export default function Home() {
             Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
             sans-serif;
         }
+
+        .button:hover,
+        .button:focus,
+        .button:active {
+          color: #0070f3;
+          border-color: #0070f3;
+        }
+
+        .button {
+          border-radius: 10px;
+          background-color: white;
+          font-size: 1.25rem;
+          border-width: 1px;
+        }
+
+        .buttonSent {
+          border-radius: 10px;
+          background-color: white;
+          font-size: 1.25rem;
+          border-width: 1px;
+          color: #0070f3;
+          border-color: #0070f3;
+        }
+
 
         * {
           box-sizing: border-box;
