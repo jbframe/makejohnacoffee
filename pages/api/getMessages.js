@@ -1,7 +1,7 @@
 import neo4j from 'neo4j-driver'
 import config  from './../../config.js'
 
-const neo4jUri = 'neo4j://localhost'
+const neo4jUri = 'neo4j://3.140.0.95:7687'
 const driver = neo4j.driver(
   neo4jUri,
   neo4j.auth.basic('neo4j', config.neo4jPassword)

@@ -13,9 +13,9 @@ export default function Home() {
     'message': ''
   });
 
-  const [BMAC, setBMAC] = useState([]);
+  const [BMAC, setBMAC] = useState([])
   const [lastIDStored, setLastIDStored] = useState([]);
-  const [msgSubmitted, setMsgSubmitted] = useState(false, []);
+  const [msgSubmitted, setMsgSubmitted] = useState(false);
 
 
   // const getLastIDStorerd = ()=> {
@@ -70,7 +70,7 @@ export default function Home() {
 
   const formSubmit = (e)=> {
     e.preventDefault();
-    setMsgSubmitted = true;
+    setMsgSubmitted(true);
     Axios.post('/api/postMessage/', {
       'email': inputValues.email,
       'message': inputValues.message,
