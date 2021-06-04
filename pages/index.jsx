@@ -97,7 +97,15 @@ export default function Home() {
         <h1 className="title">
           Make John a ☕️
         </h1>
-
+        <div className="description">
+          <div>MAKE John a coffee via the magic of the internet!</div>
+          <div>&nbsp;</div>
+          <div>Each time you 'Make John a ☕️ ', the MESSAGE you</div>
+          <div>leave will be ENQUEUED on John's REAL LIFE internet</div>
+          <div>connected COFFEE MACHINE. AND he'll reply over email</div>
+          <div>while he drinks the coffee! You get to say hi and</div>
+          <div>John gets caffeinated!</div>
+        </div>
         <form className="form" onSubmit={formSubmit}>
           <textarea
             name="email"
@@ -196,6 +204,7 @@ export default function Home() {
         .container {
           min-height: 50vh;
           padding: 0 0.5rem;
+
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -205,7 +214,7 @@ export default function Home() {
         .title {
           margin: 0;
           line-height: 1.15;
-          font-size: 4rem;
+          font-size: 3rem;
         }
 
         .title,
@@ -214,8 +223,8 @@ export default function Home() {
         }
 
         .description {
-          line-height: 1.5;
-          font-size: 1.5rem;
+          line-height: 1.75;
+          font-size: .8rem;
         }
 
         .form {
