@@ -1,4 +1,4 @@
-# [makejohnacoffee.com](http://makejohnacoffee.com) #
+# Vist [makejohnacoffee.com](https://bit.ly/2QmOra0) to see the deployed application #
 <!--
 > This material was originally posted [here](http://www.quora.com/What-is-Amazons-approach-to-product-development-and-product-management). It is reproduced here for posterities sake.
 
