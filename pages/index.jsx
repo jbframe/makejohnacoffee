@@ -98,7 +98,7 @@ export default function Home() {
           description: 'MAKE John a coffee via the magic of the internet!',
           images: [
             {
-              url: 'https://lh3.googleusercontent.com/pw/ACtC-3cCXdcNsU8ny1KZrEAMK6XjWklzAdw7uGADGPJ8oShyvzOg65C850DmjtydncYtnNgLWodca-dd-s1d3rWK5YHSiRSF2PXgmpFzHhH3x6DF8neJIexNBd_Q-fGrG61oU1rNwzeIWTpjt_PLNq3TZQ5QxA=w518-h480-no?authuser=0',
+              url: 'https://lh3.googleusercontent.com/pw/ACtC-3dQTJl-jaMnCghXQlPeqcQVHIxQJBmKr_Tecxo61mKfvaLNN8MyHpiI5K8EBg2iVjvx7wi4nQB9Pxi9CSLRXjD6qKrkbIBO2lbTndjXN_2Ttw-9yCAJE5DR0xsq-N-6-2YEA41iQ-K2Lt67qgRWRtUjBg=w537-h150-no?authuser=0',
               width: 518,
               height: 480,
               alt: 'Make John a ☕️',
