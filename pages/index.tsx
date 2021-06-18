@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Axios from 'axios';
 import Link from 'next/link'
+import { NextSeo } from 'next-seo';
 
 //tay tay quotes if needed
 //https://api.taylor.rest/ RIP THIS API IS DEAD
@@ -88,8 +89,25 @@ export default function Home() {
 
   return (
     <div className="container">
+      <NextSeo
+        title="Make John a ☕️"
+        description="MAKE John a coffee via the magic of the internet!"
+        openGraph={{
+          url: 'http://www.makejohnacoffee.com',
+          title: 'Make John a ☕️',
+          description: 'MAKE John a coffee via the magic of the internet!',
+          images: [
+            {
+              url: 'https://lh3.googleusercontent.com/pw/ACtC-3cCXdcNsU8ny1KZrEAMK6XjWklzAdw7uGADGPJ8oShyvzOg65C850DmjtydncYtnNgLWodca-dd-s1d3rWK5YHSiRSF2PXgmpFzHhH3x6DF8neJIexNBd_Q-fGrG61oU1rNwzeIWTpjt_PLNq3TZQ5QxA=w518-h480-no?authuser=0',
+              width: 518,
+              height: 480,
+              alt: 'Make John a ☕️',
+            }
+          ],
+          site_name: 'ake John a ☕️',
+        }}
+      />
       <Head>
-        <title>Make John a ☕️</title>
         <link rel="icon" href="/favicon-16x16.png" />
       </Head>
 
