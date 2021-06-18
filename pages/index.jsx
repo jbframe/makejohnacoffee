@@ -99,8 +99,8 @@ export default function Home() {
           images: [
             {
               url: 'https://lh3.googleusercontent.com/pw/ACtC-3dQTJl-jaMnCghXQlPeqcQVHIxQJBmKr_Tecxo61mKfvaLNN8MyHpiI5K8EBg2iVjvx7wi4nQB9Pxi9CSLRXjD6qKrkbIBO2lbTndjXN_2Ttw-9yCAJE5DR0xsq-N-6-2YEA41iQ-K2Lt67qgRWRtUjBg=w537-h150-no?authuser=0',
-              width: 200,
-              height: 100,
+              width: 1200,
+              height: 628,
               alt: 'Make John a ☕️',
             }
           ],
