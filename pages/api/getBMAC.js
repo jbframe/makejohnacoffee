@@ -1,11 +1,10 @@
 import neo4j from 'neo4j-driver'
-import Config  from './../../config.js'
 import axios from 'axios'
 
 const neo4jUri = 'bolt://3.140.0.95:7687'
 const driver = neo4j.driver(
   neo4jUri,
-  neo4j.auth.basic('neo4j', Config.neo4jPassword)
+  neo4j.auth.basic('neo4j', process.env.DB_AUTH)
 )
 
 export default function getBMAC(req, res) {
@@ -13,7 +12,7 @@ export default function getBMAC(req, res) {
         let result = axios(req.body.url, {
           method: 'GET',
           headers: {
-            'Authorization': `Bearer ${Config.token}`,
+            'Authorization': `Bearer ${process.env.API_TOKEN}`,
           }
         })
         .then((result)=> {

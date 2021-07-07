@@ -1,11 +1,10 @@
 import neo4j from 'neo4j-driver'
-import Config  from './../../config.js'
 import axios from 'axios'
 
 const neo4jUri = 'bolt://3.140.0.95:7687'
 const driver = neo4j.driver(
   neo4jUri,
-  neo4j.auth.basic('neo4j', Config.neo4jPassword)
+  neo4j.auth.basic('neo4j', process.env.DB_AUTH)
 )
 
 export default function postBMAC(req, res) {
